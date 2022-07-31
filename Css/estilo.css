@@ -19,53 +19,6 @@ body{
     background-color: #E0C4AD;
     text-align: justify;
 }
-main{
-    margin: auto;
-    min-width: 300px;
-    max-width: 1100px;
-    margin-bottom: 10px;
-    
-}
-
-article{
-   background-color: white;
-   border-bottom-left-radius: 5px;
-   border-bottom-right-radius: 5px;
-   padding: 2%;
-}
-h1{
-    font-family: var(--font-nova);
-}      
-nav{
-    padding: 10px;
-    background-color: var(--cor0);
-}
-nav a{
-    text-decoration: none;
-    color: var(--cor3);
-    font-size: 20pt;
-    padding: 3px;
-    border-radius: 5px;
-    color: white;
-}
-nav a:hover{
-    background-color: var(--cor3);
-    color: var(--cor1);
-}
-li{
-    display: inline;
-    padding: 20px;
-    font-family: var(--font-nova);  
-}
-footer{
-    padding-top: 10px;
-    padding: 20px;
-    text-align: center;
-    background-color: var(--cor0);
-    color: white;
-    display: flex;
-    font-size: 18pt;
-}
 header{
     text-align: center;
     min-height: 100px;
@@ -85,17 +38,56 @@ header > p{
     font-family: var(--font-nova);
     padding-bottom: 30px;
 }
-img{
-    max-width: 100%;
+nav{
+    padding: 10px;
+    text-align: center;
+    background-color: var(--cor0);
 }
-.right{
-    display: flex;
-    align-items: flex-end;
+nav a{
+    text-decoration: none;
+    color: var(--cor3);
+    font-size: 20pt;
+    padding: 3px;
+    border-radius: 5px;
+    color: white;
+}
+nav a:hover{
+    background-color: var(--cor3);
+    color: var(--cor1);
+}
+li{
+    display: inline;
+    padding: 20px;
+    font-family: var(--font-nova);  
+}
+main{
+    margin: auto;
+    min-width: 300px;
+    max-width: 1100px;
+    margin-bottom: 10px;
+    
 }
 
+article{
+   background-color: white;
+   border-bottom-left-radius: 5px;
+   border-bottom-right-radius: 5px;
+   padding: 2%;
+}
 p{
     margin-top: 10px;
     font-family: var(--font-nova);
+}
+h1{
+    font-family: var(--font-nova);
+}      
+img{
+    max-width: 100%;
+}
+.logo_empresa{
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
 }
 table{
     width: 100%;
@@ -122,6 +114,7 @@ tr:hover{
 }
 .ir-topo{
     text-decoration: none;
+    display: ;
 }
 footer > p{
     margin: 10px;
@@ -132,6 +125,13 @@ footer a{
 }
 footer a:hover{
     color: var(--cor3);
+}
+footer{
+    padding-top: 10px;
+    padding: 20px;
+    background-color: var(--cor0);
+    color: white;
+    font-size: 18pt;
 }
 
 .appleI, .produtos, .appleII, .jobs{
@@ -146,28 +146,135 @@ figcaption{
 h3{
     font-family: var(--font-nova);
 }
-.container p {
-    padding: 10px;
+.esquerda p{
+    padding: 5px;
+}
+.esquerda{
+    
 }
 .container{
     display: flex;
+    justify-content: space-between;
 }
-
-
+.direita{
+    display: flex;
+    flex-direction: column-reverse;
+     
+}
+.title{
+    text-align: center;
+    font-family: var(--font-nova);
+    padding: 50px;
+}
+fieldset{
+    font-weight:bold;
+    margin-bottom: 30px;
+    padding: 20px;
+    height: 300px;
+}
+form{
+    font-size: 15pt;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+label{
+    font-family: var(--font-nova);
+}
+input{
+    width: 300px;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+textarea{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 5px;
+}
+input::placeholder{
+    color: var(--cor2);
+}
+.enunciado{
+    text-align: center;
+    font-family: var(--font-nova);
+}
+.input{
+    display: flex;
+    justify-content: space-around;
+}
+.textarea{
+    padding-top: 20px;
+}
+.checkbtn{
+    font-size: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    display: flex;
+    display: none;
+    justify-content: end;
+}
+#check{
+    display: none;
+}
+.btn{
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+}
 @media screen and (max-width: 768px) {
     section, img{
-        max-width: 330px;
         width: 100%;
         padding: 0;
     }
-@media screen and (max-width: 600px){
+    ul{
+        position: fixed;
+    }
+@media screen and (max-width: 550px){
         nav li{
             display: block;
-            text-align: center;
             height: 5vh;
         }
-        .container a{
-            display: none;
+        .ir-topo{ 
         }
+        .direita p{
+            display: none; 
+        }
+        .textarea{
+            padding-top: 20px;
+        }
+        fieldset{
+          height: 60vh;  
+        }
+        .checkbtn{
+            display: flex;
+        }
+        ul{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            left: -100%;
+            background-color: #101B7A;
+            transition: all .5s;
+        }
+        nav ul li{
+            display: block;
+            margin: 50px;
+            line-height: 30px;
+        }
+        #check:checked ~ ul{
+            left: 0;
+            position: static; 
+        }
+        
     }
 }
+/*@media  screen and (max-width: 320px) {
+    main{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        font-size: 10pt;
+    }   
+}*/
