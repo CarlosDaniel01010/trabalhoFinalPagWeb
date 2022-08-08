@@ -15,11 +15,11 @@
     <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
-        <i class="fas fa-bars">
-            <div class="btn"></div>
-            <div class="btn"></div>
-            <div class="btn"></div>
-        </i>
+            <div class="bar_menu">
+                <div class="btn1"></div>
+                <div class="btn2"></div>
+                <div class="btn3"></div>
+            </div>
         </label>
         <ul>
             <div class="meio">
@@ -36,9 +36,13 @@
             <div class="title"><h2>Formulário para Sugestões</h2></div>
             <div class="enunciado"><p>Escreva qual empresa você deseja ver em nossa página e o que pode ser melhorado.</p></div>
             <fieldset><legend>Informações</legend>
-            <form action="#">    
-                <label for="nome">Nome</label>  <input type="text"  placeholder="Nome">
-                <label for="email">E-mail</label>   <input type="email" placeholder="teste@email">
+            <form action="#">
+
+                <div class="container2">
+                    <label for="nome">Nome:</label> <input type="text"  placeholder="Nome" class="">
+                    <label for="email" class="email">E-mail: </label> <input type="email" placeholder="teste@email" class="">
+                </div>
+
                 <div class="textarea">
                     <textarea name="sugestao" id="" cols="30" rows="10"></textarea>
                 </div>
